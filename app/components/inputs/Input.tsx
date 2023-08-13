@@ -66,6 +66,7 @@ const Input : React.FC<InputProps> =({
         `
        }
        />
+       {/* for translating and communicating with the component we use peer-translate-y-4 */}
        <label 
          className={`
           absolute
@@ -80,10 +81,11 @@ const Input : React.FC<InputProps> =({
           peer-placeholder-shown:scale-100
           peer-placeholder-shown:translate-y-0
           peer-focus:scale-75
-          peer-focus:translate-y-4
+          
+          peer-focus:-translate-y-4
           ${errors[id] ? 'text-rose-500' : 'text-zinc-400'}
          `}
-        >
+        > 
          {label} 
         </label>
         </div>

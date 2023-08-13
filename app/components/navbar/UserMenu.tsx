@@ -6,9 +6,11 @@ import Avatar from '../Avatar';
 import { useCallback , useState } from 'react';
 import MenuItem from './MenuItem';
 import useRegisterModal from '@/app/hooks/useRegisterModel';
+import useLoginModal from '@/app/hooks/useLoginModal';
 
 const UserMenu = () => {
     const registerModal = useRegisterModal();
+    const loginModal = useLoginModal();
     const [isOpen , setIsOpen ]= useState(false);
 
     // open kar do agar value mere value ke baraabar nahi hai toh 
@@ -82,7 +84,7 @@ const UserMenu = () => {
                     <>
                     {/* here we have defined onclick and label in this system */}
                     <MenuItem
-                        onClick={() => {}}
+                        onClick={(loginModal.onOpen)}
                         label = "Login"
                     />
                     <MenuItem
