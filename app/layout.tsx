@@ -1,13 +1,17 @@
 import './globals.css'
 
 import { Nunito } from "next/font/google";
+
 import Navbar from './components/navbar/Navbar';
 import ClientOnly from './components/ClientOnly';
-// import Modal from './components/modals/Modal';
-import RegisterModal from './components/modals/RegisterModal';
 import ToasterProvider from './providers/ToasterProvider'
+// import Modal from './components/modals/Modal';
+
+import RegisterModal from './components/modals/RegisterModal';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
+import RentModal from './components/modals/RentModal';
+
 export const metadata = {
   title: 'Airbnb',
   description: 'Airbnb clone',
@@ -31,6 +35,7 @@ export default async function RootLayout({
         <ClientOnly>
           {/* <Modal actionLabel="Submit" title="Hello world" isOpen /> */}
           <ToasterProvider /> 
+          <RentModal /> 
           <RegisterModal />
           <LoginModal /> 
           <Navbar currentUser = {currentUser}/>
