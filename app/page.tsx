@@ -4,7 +4,7 @@ import getListings from "./actions/getListings";
 import ClientOnly from "./components/ClientOnly";
 import Container from "./components/Container";
 import EmptyState from "./components/EmptyState";
-import ListingCard from "./components/ListingCard";
+import ListingCard from "./components/listings/ListingCard";
 
 export default async function Home() {
 
@@ -34,12 +34,12 @@ export default async function Home() {
             gap-8
           "
           >
-            {listings.map((listing: any) => {
+            {listings.map((listing) => {
               return (
                 <ListingCard 
+                  currentUser={currentUser}
                   key={listing.id}
                   data={listing}
-                  currentUser={currentUser}
                 />
                 // <div>{listing.title}</div>
               )
