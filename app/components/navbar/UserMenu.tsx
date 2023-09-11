@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 // navigation bar icon
 import Avatar from '../Avatar';

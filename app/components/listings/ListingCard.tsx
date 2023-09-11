@@ -1,6 +1,6 @@
 'use client'
 
-import { Listing , Reservation } from '@prisma/client';
+import {  Reservation } from '@prisma/client';
 
 
 import Image from "next/image"; 
@@ -30,7 +30,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
     onAction,
     disabled,
     actionLabel,
-    actionId="",
+    actionId='',
     currentUser
 }) => {
     const router = useRouter();
@@ -71,7 +71,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
     },[reservation]);
 
     return ( <div
-                onClick={() => router.push(`/listings/@{data.id}`)}
+                onClick={() => router.push(`/listings/${data.id}`)}
                 className="
                     col-span-1 cursor-pointer group
                     "
