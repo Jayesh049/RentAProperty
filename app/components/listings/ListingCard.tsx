@@ -1,6 +1,6 @@
 'use client'
 
-import {  Reservation } from '@prisma/client';
+
 
 
 import Image from "next/image"; 
