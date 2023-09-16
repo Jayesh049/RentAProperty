@@ -20,7 +20,7 @@ export async function POST(
         endDate,
         totalPrice
     } = body;
-
+console.log(body);
     if(!listingId || !startDate || !endDate || !totalPrice){
         return NextResponse.error();
     }
@@ -33,7 +33,7 @@ export async function POST(
             reservations: {
                 create: {
                     userId:currentUser.id,
-                    startdate: startDate,
+                    startDate,
                     endDate,
                     totalPrice
                 }

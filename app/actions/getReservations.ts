@@ -16,7 +16,7 @@ try
     const { listingId , userId , authorId } = params;
     
     // we hve created queries for all
-    const query: any ={};
+    const query: any = {};
 
     if(listingId) {
         query.listingId = listingId;
@@ -32,7 +32,7 @@ try
 
 
     const reservations = await prisma.reservation.findMany({
-        where: query,
+        where : query,
         include: {
             listing: true,
         },
@@ -40,17 +40,15 @@ try
             createdAt: 'desc'
         }
     });
-    
-    
     const safeReservations = reservations.map(
     (reservation) =>({
         ...reservation,
-        createdAt: reservation.createdAt.toISOString(),
-        startDate: reservation.startDate.toISOString,
-        endDate: reservation.endDate.toISOString(),
+        createdAt: reservation.createdAt.toISOString() ,
+        startDate: reservation.startDate.toISOString(),
+        endDate: reservation.endDate.toISOString() ,
         listing: {
             ...reservation.listing,
-            createdAt: reservation.listing.createdAt.toISOString()
+            createdAt: reservation.listing.createdAt.toISOString(),
         }
     })
     );
