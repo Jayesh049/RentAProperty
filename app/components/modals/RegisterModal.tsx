@@ -77,7 +77,7 @@ const RegisterModal = () => {
              register={register}
              errors={errors}
              required
-            />
+            /> 
             <Input 
              id="name"
              label="Name"
