@@ -5,13 +5,15 @@ import { Nunito } from "next/font/google";
 import Navbar from './components/navbar/Navbar';
 import ClientOnly from './components/ClientOnly';
 import ToasterProvider from './providers/ToasterProvider'
-// import Modal from './components/modals/Modal';
+
 
 import RegisterModal from './components/modals/RegisterModal';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
 import RentModal from './components/modals/RentModal';
 import SearchModal from './components/modals/SearchModal';
+
+export const dynamic = 'force-dynamic'
 
 export const metadata = {
   title: 'Airbnb',
