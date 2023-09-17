@@ -1,7 +1,7 @@
 import './globals.css'
 
 import { Nunito } from "next/font/google";
-import useSWR from 'swr'
+
 
 import Navbar from './components/navbar/Navbar';
 import ClientOnly from './components/ClientOnly';
