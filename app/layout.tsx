@@ -1,18 +1,19 @@
 import './globals.css'
 
-import { Nunito } from "next/font/google";
+
+import { Nunito } from 'next/font/google'
+
+import Navbar from '@/app/components/navbar/Navbar';
+import LoginModal from '@/app/components/modals/LoginModal';
+import RegisterModal from '@/app/components/modals/RegisterModal';
+import SearchModal from '@/app/components/modals/SearchModal';
+import RentModal from '@/app/components/modals/RentModal';
+
+import ToasterProvider from '@/app/providers/ToasterProvider';
+import ClientOnly from '@/app/components/ClientOnly';
 
 
-import Navbar from './components/navbar/Navbar';
-import ClientOnly from './components/ClientOnly';
-import ToasterProvider from './providers/ToasterProvider'
-
-
-import RegisterModal from './components/modals/RegisterModal';
-import LoginModal from './components/modals/LoginModal';
-import getCurrentUser from './actions/getCurrentUser';
-import RentModal from './components/modals/RentModal';
-import SearchModal from './components/modals/SearchModal';
+import getCurrentUser from '@/app/actions/getCurrentUser';
 
 export const dynamic = 'force-dynamic'
 
