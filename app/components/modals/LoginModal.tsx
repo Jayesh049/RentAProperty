@@ -114,12 +114,12 @@ const LoginModal = () => {
                 icon={FcGoogle}
                 onClick={ () => signIn('google')}
             /> 
-            <Button 
+            {/* <Button 
                 outline 
                 label = "Continue with Github"
                 icon={AiFillGithub}
                 onClick={() => signIn('github')}
-            />
+            /> */}
             <div 
                 className='
                  text-neutral-500
