@@ -12,6 +12,8 @@ import {
 } from 'react-hook-form'; 
 
 import useRegisterModal from '@/app/hooks/useRegisterModel';
+import useLoginModal from '@/app/hooks/useLoginModal';
+
 import Modal from './Modal';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
@@ -19,7 +21,7 @@ import Input from '../inputs/Input';
 import { toast } from 'react-hot-toast';
 import Button from '../Button';
 import { signIn } from 'next-auth/react';
-import useLoginModal from '@/app/hooks/useLoginModal';
+
 const RegisterModal = () => {
     
     const registerModal = useRegisterModal();
@@ -46,6 +48,7 @@ const RegisterModal = () => {
 
         axios.post('/api/register', data)
          .then(() => {
+            toast.success('Registered!');
             registerModal.onClose();
             loginModal.onOpen();
          })
@@ -104,14 +107,14 @@ const RegisterModal = () => {
                 outline
                 label="Continue with Google"
                 icon={FcGoogle}
-                onClick={ () => signIn('google')}
+                onClick={() => signIn('google')}
             /> 
-            <Button 
+            {/* <Button 
                 outline 
                 label = "Continue with Github"
                 icon={AiFillGithub}
                 onClick={() => signIn('github')}
-            />
+            /> */}
             <div 
                 className='
                  text-neutral-500
